@@ -38,6 +38,7 @@
 
 // Noesis includes
 #include "NoesisSDK.h"
+#include "Engine/Engine.h"
 
 extern "C" void NsRegisterReflectionAppInteractivity();
 
@@ -419,7 +420,7 @@ void NoesisPlaySoundCallback(void* UserData, const char* Filename, float Volume)
 
 	if (GEngine)
 	{
-		FAudioDevice* const AudioDevice = GEngine->GetActiveAudioDevice();
+		FAudioDevice* const AudioDevice = GEngine->GetMainAudioDeviceRaw();
 		if (AudioDevice)
 		{
 			FActiveSound NewActiveSound;

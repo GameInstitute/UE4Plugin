@@ -47,7 +47,7 @@ UCLASS(Config = Engine, DefaultConfig)
 class NOESISRUNTIME_API UNoesisSettings : public UObject
 {
 	GENERATED_UCLASS_BODY()
-
+public:
 	/** Fill with the Name value your were given when purchasing your Noesis license */
 	UPROPERTY(EditAnywhere, Config, Category = "License", meta = (ConfigRestartRequired = true))
 	FString LicenseName;
